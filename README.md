@@ -1,6 +1,6 @@
 # LighterBox
 
-A very lightweight lightbox with a bare minimum of features:
+A very lightweight lightbox with a bare minimum of features, packaged for the Rails asset pipeline:
 
  * Displays a single image (with caption) or arbitrary content loaded via Ajax.
  * Fully accessible (note that all UI alt texts and titles are in german).

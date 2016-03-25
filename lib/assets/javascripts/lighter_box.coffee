@@ -242,7 +242,7 @@ class AjaxLighterBox extends LighterBox
     href = @srcEl.attr("href")
     fragment = @srcEl.data("lightbox-fragment")
     $.get href, (data) =>
-      data = $(data).find(fragment) if fragment
+      data = $("<div/>").append($.parseHTML(data)).find(fragment)
       @ajaxContainer.html(data)
 
 

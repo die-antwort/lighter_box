@@ -19,7 +19,7 @@ class Backdrop
 
 class Spinner
   constructor: (@parentEl) ->
-    @el = $("<div class='lighter-box-spinner' tabindex='0'><div class='sr-only'>wird geladen …</div><div class='rect1' /><div class='rect2' /><div class='rect3' /><div class='rect4' /><div class='rect5' /></div>").hide().appendTo(@parentEl)
+    @el = $("<div class='lighter-box-spinner' tabindex='0'><div class='lighter-box-sr-only'>wird geladen …</div><div class='rect1' /><div class='rect2' /><div class='rect3' /><div class='rect4' /><div class='rect5' /></div>").hide().appendTo(@parentEl)
     @delay = null
 
   showDelayed: (delayMS) =>

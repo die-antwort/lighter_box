@@ -54,6 +54,7 @@ The following attributes on the source element (link) can be used to customize L
 Image lightbox only:
 
  * `data-lightbox-caption`: Image caption. If not set, the image’s alt text is used as caption.
+ * `data-lightbox-caption-allow-html`: If present, the image caption is interpreted as HTML.
 
 Ajax lightbox only:
 

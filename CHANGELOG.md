@@ -1,3 +1,7 @@
+# v0.2.0
+
+* New option `data-lightbox-caption-allow-html` for image lightboxes: Allows the image caption to be interpreted as HTML.
+
 # v0.1.1
 
 * Fix “fragment” feature of ajax lightbox not always working.

@@ -221,7 +221,7 @@ class ImageLighterBox extends LighterBox
       caption = @srcEl.data("lightbox-caption") || @srcEl.find("img").attr("alt") || ""
       newImg = $("<img>").attr(src: href).one "load", =>
         @modal.find("img").attr(src: newImg.attr("src"))
-        @modal.find("figcaption").text(caption).toggleClass("empty-caption", caption.trim() == "")
+        @_setCaption(caption)
         @resizer.run()
         deferred.resolve()
 
@@ -229,7 +229,13 @@ class ImageLighterBox extends LighterBox
     super()
     @resizer.run()
 
-
+  _setCaption: (caption) =>
+    figcaptionEl = @modal.find("figcaption")
+    if @srcEl.data("lightbox-caption-allow-html")
+      figcaptionEl.html(caption)
+    else
+      figcaptionEl.text(caption)
+    figcaptionEl.toggleClass("empty-caption", caption.trim() == "")
 
 class AjaxLighterBox extends LighterBox
   constructor: (srcEl) ->

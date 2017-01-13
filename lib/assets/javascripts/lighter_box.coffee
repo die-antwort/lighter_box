@@ -245,7 +245,7 @@ class AjaxLighterBox extends LighterBox
     @ajaxContainer = $("<div/>").appendTo(@modal)
 
   _loadContent: =>
-    href = @srcEl.attr("href")
+    href = @srcEl.data("lightbox-href") || @srcEl.attr("href")
     fragment = @srcEl.data("lightbox-fragment")
     $.get href, (data) =>
       data = $("<div/>").append($.parseHTML(data)).find(fragment)

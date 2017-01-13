@@ -59,6 +59,7 @@ Image lightbox only:
 Ajax lightbox only:
 
  * `data-lightbox-fragment`: A jQuery selector to specify the portion of the remote document to be loaded into the lightbox (similar to the fragment feature of [`jQuery.load()`](http://api.jquery.com/load/)).
+ * `data-lightbox-href`: The URL that to be loaded into the lightbox. If not set, the link’s `href` attribute is used.
 
 
 ### Events

@@ -1,12 +1,6 @@
 $lighter-box-margin: 24px !default
 $lighter-box-padding: 24px !default
 
-body.lighter-box-has-backdrop
-  // Damit lässt sich zwar auf Desktop-Browsern bequem das Scrolling „unter“ dem Modal verhindern, aber es hat zwei Probleme:
-  //  * Funktioniert nicht auf mobilen Browsern
-  //  * Blendet einen eventuell vorhandenen Scrollbar aus, dadurch kanns passieren, dass das Layout „hüpft“. (Bootstrap fixt das, indem sie die Scrollbar-Breite ausmessen und das Bodypadding dann explizit entsprechend anpassen – geht, ist aber recht aufwändig.)
-  //overflow: hidden
-
 // Only display content to screen readers
 // See: http://a11yproject.com/posts/how-to-hide-content/
 .lighter-box-sr-only

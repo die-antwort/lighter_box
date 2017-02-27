@@ -42,32 +42,33 @@ class Spinner
 
 class LightboxGroup
   constructor: (@currentEl) ->
-    @elems = if (groupName = @currentEl.attr("data-lightbox-group"))
-      $("[data-lightbox-group='#{groupName}']")
-    else
-      @currentEl
 
   index: =>
-    @elems.index(@currentEl)
+    @_elems().index(@currentEl)
 
   hasNext: =>
-    @index() + 1 < @elems.length
+    @index() + 1 < @_elems().length
 
   hasPrev: =>
     @index() - 1 >= 0
 
   nextHref: =>
-    @elems.eq(@index() + 1).attr("href")
+    @_elems().eq(@index() + 1).attr("href")
 
   prevHref: =>
-    @elems.eq(@index() - 1).attr("href")
+    @_elems().eq(@index() - 1).attr("href")
 
   next: =>
-    @currentEl = @elems.eq(@index() + 1)
+    @currentEl = @_elems().eq(@index() + 1)
 
   prev: =>
-    @currentEl = @elems.eq(@index() - 1)
+    @currentEl = @_elems().eq(@index() - 1)
 
+  _elems: =>
+    if (groupName = @currentEl.attr("data-lightbox-group"))
+      $("[data-lightbox-group='#{groupName}']:visible")
+    else
+      @currentEl
 
 
 class ImageModalResizer

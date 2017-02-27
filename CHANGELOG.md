@@ -1,3 +1,7 @@
+# v0.3.2
+
+* Gallery mode: Ignore hidden source elements. This makes the gallery mode compatible with all sorts of client side filtering. As a side effect, the list of source elements used for gallery mode is now determined at the moment the lightbox is openend (in earlier versions it was determined when lighter box was initialized).
+
 # v0.3.1
 
 * Reset margins and padding for `figure` element used in image lightboxes (some CSS frameworks – eg. Bootstrap – apply non-zero margins to `figure` elements by default).

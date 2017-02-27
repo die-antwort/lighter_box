@@ -49,7 +49,7 @@ $("body").on "click", "a[data-lightbox]", (ev) ->
 The following attributes on the source element (link) can be used to customize LighterBox:
 
  * `data-lightbox-class`: Additional css class names for the lightbox modal.
- * `data-lightbox-group`: Used for gallery mode: Next / previous links will be displayed to allow navigation between lightboxes for source elements that share the save value for this attribute.
+ * `data-lightbox-group`: Used for gallery mode: Next / previous links will be displayed to allow navigation between lightboxes for source elements that share the save value for this attribute. Hidden source elements are ignored, so the gallery mode works well with all sorts of client side filtering.
 
 Image lightbox only:
 

@@ -23,7 +23,7 @@ Add `lighter_box` to your Gemfile. Use sprockets directives to include the code 
 //= require "lighter_box"
 ```
 
-```css
+```sass
 @import "lighter_box"
 ```
 

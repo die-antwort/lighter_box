@@ -1,3 +1,7 @@
+# v0.4.0
+ * New fullscreen mode for small screen devices.
+ * Close button is now positioned outside the lightbox, resulting in a larger click target and more consistent placement with the previous/next links in gallery mode Also, the close button is now already visible when the lightbox content is loading, allowing the user to abort the loading process. (Technically this has already been possible by simply clicking on the backdrop, but this is not really discoverable from an UX standpoint).
+
 # v0.3.2
 
 * Gallery mode: Ignore hidden source elements. This makes the gallery mode compatible with all sorts of client side filtering. As a side effect, the list of source elements used for gallery mode is now determined at the moment the lightbox is openend (in earlier versions it was determined when lighter box was initialized).

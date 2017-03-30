@@ -5,8 +5,10 @@ A very lightweight lightbox with a bare minimum of features, packaged for the Ra
  * Displays a single image (with caption) or arbitrary content loaded via Ajax.
  * Fully accessible (note that all UI alt texts and titles are in german).
  * Gallery mode (navigation between related images / contents).
+ * Fullscreen mode for small screen devices (see below).
  * Supports nested lightboxes.
 
+On small screen devices the lightbox will be shown fullscreen, with a fixed header bar containing the close button (and gallery buttons, if applicable). Per default this mode is activated for screens narrower than 480px (can be customized by setting `$lighter-box-fullscreen-breakpoint` before importing the Sass file).
 
 ## Requirements
 

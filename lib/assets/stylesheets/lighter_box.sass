@@ -1,5 +1,8 @@
 $lighter-box-margin: 24px !default
 $lighter-box-padding: 24px !default
+$lighter-box-fullscreen-breakpoint: 479px !default
+$lighter-box-fullscreen-padding: 12px !default
+$lighter-box-fullscreen-navbar-height: 30px !default
 
 // Only display content to screen readers
 // See: http://a11yproject.com/posts/how-to-hide-content/
@@ -41,25 +44,9 @@ $lighter-box-padding: 24px !default
   max-width: calc(100vw - #{2 * $lighter-box-margin})
   max-height: calc(100vh - #{2 * $lighter-box-margin})
   overflow-y: auto
+  -webkit-overflow-scrolling: touch
 
-.lighter-box-close-button
-  position: absolute
-  top: 0px
-  right: 0px
-  box-sizing: border-box
-  width: 24px
-  height: 24px
-  border: none
-  padding: 0
-  background: transparent
-  text-align: center
-  font: bold 18px/20px sans-serif
-  color: #ccc
-  cursor: pointer
-  &:hover, &:focus
-    color: #555
-
-.lighter-box-prev-link, .lighter-box-next-link
+.lighter-box-close-button, .lighter-box-prev-link, .lighter-box-next-link
   $width: ($lighter-box-margin + $lighter-box-padding) * 0.9
   $height: $width
   position: absolute
@@ -169,6 +156,37 @@ $lighter-box-padding: 24px !default
     transform: scaleY(1)
     -webkit-transform: scaleY(1)
 
+@media (max-width: $lighter-box-fullscreen-breakpoint)
+  .lighter-box-modal
+    // We need to use percentages here to account for issues with the URL bar on mobile browsers, see https://github.com/bokand/URLBarSizing#proposed-changes-to-chrome
+    width: 100%
+    height: 100%
+    max-width: 100%
+    max-height: 100%
+    padding: ($lighter-box-fullscreen-padding + $lighter-box-fullscreen-navbar-height) $lighter-box-fullscreen-padding $lighter-box-fullscreen-padding
+
+  .lighter-box-prev-link, .lighter-box-next-link, .lighter-box-close-button
+    $height: $lighter-box-fullscreen-navbar-height
+    position: fixed
+    top: 0
+    height: $height
+    font-size: #{$height * 0.8}
+    line-height: #{$height * 0.9}
+    background: #e8e8e8
+    color: #999
+    box-sizing: border-box
+  .lighter-box-close-button
+    box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.2)
+
+  .lighter-box-prev-link, .lighter-box-next-link
+    width: 25%
+  .lighter-box-prev-link
+    border-right: 1px solid #fff
+  .lighter-box-next-link
+    border-left: 1px solid #fff
+  .lighter-box-close-button
+    left: 0
+    width: 100%
 
 .lighter-box-modal.ie9
   display: inline-block

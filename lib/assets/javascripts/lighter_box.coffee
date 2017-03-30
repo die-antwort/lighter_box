@@ -148,7 +148,7 @@ class LighterBox
 
   _createModal: (container) =>
     modal = $("<div class='lighter-box-modal' role='dialog' aria-hidden='false' tabindex='0'/>").appendTo(container)
-    $("<button class='lighter-box-close-button' title='Vergrößerte Ansicht schließen' data-lighter-box-dismiss><span aria-hidden='true'>×</span></button>").appendTo(modal)
+    $("<button class='lighter-box-close-button' title='Vergrößerte Ansicht schließen' data-lighter-box-dismiss><span aria-hidden='true'>×</span></button>").appendTo(container)
     $("<a data-lighter-box-prev class='lighter-box-prev-link' href='#' title='Voriges Bild'><span aria-hidden='true'>‹</span></a>").appendTo(container)
     $("<a data-lighter-box-next class='lighter-box-next-link' href='#' title='Nächstes Bild'><span aria-hidden='true'>›</span></a>").appendTo(container)
     modal

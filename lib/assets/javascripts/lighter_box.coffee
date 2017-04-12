@@ -218,7 +218,7 @@ class ImageLighterBox extends LighterBox
 
   _loadContent: =>
     $.Deferred (deferred) =>
-      href = @srcEl.attr("href")
+      href = @srcEl.data("lightbox-href") || @srcEl.attr("href")
       caption = @srcEl.data("lightbox-caption") || @srcEl.find("img").attr("alt") || ""
       newImg = $("<img>").attr(src: href).one "load", =>
         @modal.find("img").attr(src: newImg.attr("src"))

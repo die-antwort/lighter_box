@@ -52,6 +52,7 @@ The following attributes on the source element (link) can be used to customize L
 
  * `data-lightbox-class`: Additional css class names for the lightbox modal.
  * `data-lightbox-group`: Used for gallery mode: Next / previous links will be displayed to allow navigation between lightboxes for source elements that share the save value for this attribute. Hidden source elements are ignored, so the gallery mode works well with all sorts of client side filtering. Note that this feature relies on jQuery’s `:visible` selector, which might yield unexpected results (eg. for links wrapping block elements, see https://github.com/jquery/jquery/issues/2227).
+ * `data-lightbox-href`: The URL that to be loaded into the lightbox. If not set, the link’s `href` attribute is used. If used with an image lightbox, this URL must also point to an image (common usecase: the link points to the original image file, but the lightbox should display a smaller version of the image instead).
 
 Image lightbox only:
 
@@ -61,7 +62,6 @@ Image lightbox only:
 Ajax lightbox only:
 
  * `data-lightbox-fragment`: A jQuery selector to specify the portion of the remote document to be loaded into the lightbox (similar to the fragment feature of [`jQuery.load()`](http://api.jquery.com/load/)).
- * `data-lightbox-href`: The URL that to be loaded into the lightbox. If not set, the link’s `href` attribute is used.
 
 
 ### Events

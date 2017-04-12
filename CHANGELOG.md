@@ -1,3 +1,6 @@
+# v0.5.0
+ * Option `data-lightbox-href` can now also be used for image lightboxes.
+
 # v0.4.0
  * New fullscreen mode for small screen devices.
  * Close button is now positioned outside the lightbox, resulting in a larger click target and more consistent placement with the previous/next links in gallery mode Also, the close button is now already visible when the lightbox content is loading, allowing the user to abort the loading process. (Technically this has already been possible by simply clicking on the backdrop, but this is not really discoverable from an UX standpoint).

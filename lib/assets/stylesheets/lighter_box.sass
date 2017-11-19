@@ -1,3 +1,4 @@
+$lighter-box-z-index: null !default
 $lighter-box-margin: 24px !default
 $lighter-box-padding: 24px !default
 $lighter-box-fullscreen-breakpoint: 479px !default
@@ -23,6 +24,8 @@ $lighter-box-fullscreen-navbar-height: 30px !default
   width: 100vw
   height: 100vh
   background: rgba(0, 0, 0, 0.6)
+  @if $lighter-box-z-index
+    z-index: $lighter-box-z-index
 
 .lighter-box-container
   position: fixed
@@ -33,6 +36,8 @@ $lighter-box-fullscreen-navbar-height: 30px !default
   display: flex
   align-items: center
   justify-content: center
+  @if $lighter-box-z-index
+    z-index: #{$lighter-box-z-index + 1}
 
 .lighter-box-modal
   position: relative

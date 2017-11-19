@@ -72,3 +72,11 @@ The following events will be triggered on the lightbox modal element:
  * `lighter-box-will-hide`: Before the lightbox elements (modal, container and backdrop) are removed from the DOM.
 
 Event handlers will get passed the lightbox instance as second parameter (after the event object).
+
+
+### Styling
+
+Depending on your site’s CSS you may need specify a custom `z-index` value for lightbox and backdrop. Set `$lighter-box-z-index` to an appropriate value before importing the styles.
+
+There are some more variables that can be customized, see `lib/assets/stylesheets/lighter_box.sass` for a full list.
+

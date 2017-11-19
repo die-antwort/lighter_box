@@ -1,3 +1,6 @@
+# v0.6.0
+ * Add ability to customize the z-index value for lightbox and backdrop (via Sass variable `$lighter-box-z-index`).
+
 # v0.5.0
  * Option `data-lightbox-href` can now also be used for image lightboxes.
 

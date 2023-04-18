@@ -81,7 +81,7 @@ class ImageModalResizer
   run: =>
     return if @running
     @running = true
-    if window.requestAnimationFrame then window.requestAnimationFrame(@_run) else @_run()
+    window.requestAnimationFrame(@_run)
 
   _run: =>
     @img.css("max-height": "none")

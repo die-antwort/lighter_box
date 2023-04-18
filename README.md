@@ -14,7 +14,7 @@ On small screen devices the lightbox will be shown fullscreen, with a fixed head
 
 Requires a recent jQuery version (may work with Zepto, too).
 
-Designed to work with current browsers (including minor workarounds to make sure it’s not completely broken in IE9).
+Designed to work with mdoern evergreen browsers.
 
 
 ## Installation
@@ -79,4 +79,3 @@ Event handlers will get passed the lightbox instance as second parameter (after 
 Depending on your site’s CSS you may need specify a custom `z-index` value for lightbox and backdrop. Set `$lighter-box-z-index` to an appropriate value before importing the styles.
 
 There are some more variables that can be customized, see `lib/assets/stylesheets/lighter_box.sass` for a full list.
-

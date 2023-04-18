@@ -1,3 +1,6 @@
+# v1.0.0
+ * Remove workarounds and polyfills for legacy browsers.
+
 # v0.6.0
  * Add ability to customize the z-index value for lightbox and backdrop (via Sass variable `$lighter-box-z-index`).
  * Fix border radius on close button (set by user agent stylesheets e.g. in Chrome).

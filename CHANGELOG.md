@@ -1,5 +1,6 @@
 # v1.0.0
  * Remove workarounds and polyfills for legacy browsers.
+ * Use vanilla CSS instead of Sass (removes dependency on the sass gem).
 
 # v0.6.0
  * Add ability to customize the z-index value for lightbox and backdrop (via Sass variable `$lighter-box-z-index`).

@@ -49,7 +49,6 @@ $lighter-box-fullscreen-navbar-height: 30px !default
   max-width: calc(100vw - #{2 * $lighter-box-margin})
   max-height: calc(100vh - #{2 * $lighter-box-margin})
   overflow-y: auto
-  -webkit-overflow-scrolling: touch
 
 .lighter-box-close-button, .lighter-box-prev-link, .lighter-box-next-link
   $width: ($lighter-box-margin + $lighter-box-padding) * 0.9
@@ -127,40 +126,26 @@ $lighter-box-fullscreen-navbar-height: 30px !default
     width: 5px
     margin: 0 1px
     display: inline-block
-    -webkit-animation: lighter-box-loader-anim 1.2s infinite ease-in-out
     animation: lighter-box-loader-anim 1.2s infinite ease-in-out
 
   .rect2
-    -webkit-animation-delay: -1.1s
     animation-delay: -1.1s
 
   .rect3
-    -webkit-animation-delay: -1.0s
     animation-delay: -1.0s
 
   .rect4
-    -webkit-animation-delay: -0.9s
     animation-delay: -0.9s
 
   .rect5
-    -webkit-animation-delay: -0.8s
     animation-delay: -0.8s
-
-@-webkit-keyframes lighter-box-loader-anim
-  0%, 40%, 100%
-    -webkit-transform: scaleY(0.5)
-
-  20%
-    -webkit-transform: scaleY(1)
 
 @keyframes lighter-box-loader-anim
   0%, 40%, 100%
     transform: scaleY(0.5)
-    -webkit-transform: scaleY(0.5)
 
   20%
     transform: scaleY(1)
-    -webkit-transform: scaleY(1)
 
 @media (max-width: $lighter-box-fullscreen-breakpoint)
   .lighter-box-modal

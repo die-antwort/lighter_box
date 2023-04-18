@@ -1,6 +1,3 @@
-IE9 = /MSIE 9\./.test(navigator.userAgent)
-
-
 class Backdrop
   constructor: ->
     @isNestedBackdrop = $(".lighter-box-backdrop").length > 0
@@ -90,7 +87,6 @@ class ImageModalResizer
     @img.css("max-height": "none")
     @modalHeight = @modal.height()
     @_resize()
-    @_ie9Fix() if IE9
     @running = false
 
   _resize: =>
@@ -103,11 +99,6 @@ class ImageModalResizer
     captionWidth = Math.max(@img.width(), @MIN_CAPTION_WIDTH)
     @figcaption.css("max-width": captionWidth)
     @_resize() if @figure.height() > @modalHeight
-
-  _ie9Fix: =>
-    left = (document.documentElement.clientWidth - @modal.outerWidth()) / 2
-    top  = (document.documentElement.clientHeight - @modal.outerHeight()) / 2
-    @modal.css(left: "#{left}px", top: "#{top}px")
 
 
 
@@ -130,9 +121,7 @@ class LighterBox
     @container.on("keydown.#{@eventNamespace}", @_onKeydown)
     @_trapFocus()
     @modal.focus()
-
-    @_setContent().then =>
-      @_ie9Fix() if IE9
+    @_setContent()
 
   hide: =>
     @_releaseFocus()
@@ -200,9 +189,6 @@ class LighterBox
   _isForemost: =>
     @container.nextAll(".lighter-box-container").length == 0
 
-  _ie9Fix: =>
-    @modal.addClass("ie9")
-
 
 
 class ImageLighterBox extends LighterBox
@@ -225,10 +211,6 @@ class ImageLighterBox extends LighterBox
         @_setCaption(caption)
         @resizer.run()
         deferred.resolve()
-
-  _ie9Fix: =>
-    super()
-    @resizer.run()
 
   _setCaption: (caption) =>
     figcaptionEl = @modal.find("figcaption")

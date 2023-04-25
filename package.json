@@ -1,0 +1,27 @@
+{
+  "name": "@die-antwort/lighter_box",
+  "version": "1.0.0",
+  "description": "A very lightweight but fully accessible lightbox.",
+  "main": "dist/lighter_box.js",
+  "files": [
+    "CHANGELOG",
+    "dist/",
+    "src/"
+  ],
+  "scripts": {
+    "build": "coffee --compile --output dist/ src/lighter_box.coffee"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/die-antwort/lighter_box.git"
+  },
+  "author": "Stefan Daschek <stefan@die-antwort.eu>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/die-antwort/lighter_box/issues"
+  },
+  "homepage": "https://github.com/die-antwort/lighter_box#readme",
+  "devDependencies": {
+    "coffeescript": "^2.7.0"
+  }
+}

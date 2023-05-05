@@ -1,4 +1,5 @@
 # v1.0.0
+ * lighter_box is now released as NPM, no longer as Ruby gem.
  * Remove workarounds and polyfills for legacy browsers.
  * Use vanilla CSS instead of Sass (removes dependency on the sass gem).
 

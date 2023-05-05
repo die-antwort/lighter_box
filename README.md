@@ -10,23 +10,15 @@ A very lightweight lightbox with a bare minimum of features, packaged for the Ra
 
 On small screen devices the lightbox will be shown fullscreen, with a fixed header bar containing the close button (and gallery buttons, if applicable). Per default this mode is activated for screens narrower than 480px (can be customized by setting `--lighter-box-fullscreen-breakpoint` in your CSS).
 
-## Requirements
+## Requirements and Compatibility
 
-Requires a recent jQuery version (may work with Zepto, too).
-
-Designed to work with mdoern evergreen browsers.
+LighterBox requires jQuery. It is designed to work with all modern browsers.
 
 
 ## Installation
 
-Add `lighter_box` to your Gemfile. Use sprockets directives to include the code in your JS/CSS:
-
-```javascript
-//= require "lighter_box"
 ```
-
-```sass
-@import "lighter_box.css"
+npm install @die-antwort/lighter_box --save
 ```
 
 
@@ -78,4 +70,4 @@ Event handlers will get passed the lightbox instance as second parameter (after 
 
 Depending on your site’s CSS you may need specify a custom `z-index` value for lightbox and backdrop. Set `--lighter-box-z-index` to an appropriate value in your application’s CSS.
 
-There are some more custom properties that can be set, see `lib/assets/stylesheets/lighter_box.css` for a full list.
+There are some more custom properties that can be set, see `dist/lighter_box.css` for a full list.
